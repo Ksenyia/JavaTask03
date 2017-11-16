@@ -13,7 +13,8 @@
   <c:if test="${request.Scope.naming==null}">
   	<p>Name not found<p>
   </c:if>
-	<table border="1">
+  <c:if test="${request.Scope.naming!=null}">
+  <table border="1">
   <tr border="1">
     <td>name</td>
     <td>surname</td>
@@ -27,5 +28,6 @@
     <td><jsp:getProperty property="email" name="naming"/></td>
   </tr>
 </table>
+</c:if>
 </body>
 </html>

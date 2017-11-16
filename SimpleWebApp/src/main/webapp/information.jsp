@@ -10,10 +10,10 @@
 <body>
  <jsp:useBean id = "naming" class="by.tc.task03.modal.Person"
   type = "java.lang.Object" scope = "request"/>
-  <c:if test="${request.Scope.naming==null}">
+   <c:if test="${requestScope.naming.name==null}">
   	<p>Name not found<p>
   </c:if>
-  <c:if test="${request.Scope.naming!=null}">
+   <c:if test="${requestScope.naming.name!=null}">
   <table border="1">
   <tr border="1">
     <td>name</td>
